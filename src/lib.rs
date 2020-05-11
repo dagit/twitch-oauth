@@ -6,18 +6,18 @@ use std::collections::HashMap;
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct ValidatedToken {
-    client_id: String,
-    login: Option<String>,
-    user_id: Option<String>,
-    scopes: Vec<String>,
+    pub client_id: String,
+    pub login: Option<String>,
+    pub user_id: Option<String>,
+    pub scopes: Vec<String>,
 }
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct AppAccessToken {
-    access_token: String,
-    expires_in: usize,
-    scope: Option<Vec<String>>,
-    token_type: String,
+    pub access_token: String,
+    pub expires_in: usize,
+    pub scope: Option<Vec<String>>,
+    pub token_type: String,
 }
 
 pub async fn get_app_access_token(
